@@ -20,6 +20,7 @@
       background-color: #1b1b1b;
       color: #f0f0f0;
       background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+      margin: 0;
     }
 
     header {
@@ -36,6 +37,7 @@
       align-items: center;
       justify-content: center;
       gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .header-content img {
@@ -89,13 +91,13 @@
     .banner-images {
       display: flex;
       transition: transform 3s ease;
-      width: 300vw;
     }
 
     .banner-images img {
       width: 100vw;
       height: 70vh;
       object-fit: cover;
+      flex-shrink: 0;
     }
 
     .banner-text {
@@ -283,6 +285,36 @@
       background-color: #ffe58a;
       box-shadow: 0 0 20px rgba(245,198,110,0.6);
       transform: translateY(-3px);
+    }
+
+    @media (max-width: 1024px) {
+      .banner-text {
+        padding: 2rem;
+        max-width: 90%;
+      }
+      .banner h1 {
+        font-size: 2rem;
+      }
+      .banner p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+      }
+      .banner-text {
+        padding: 1.5rem;
+      }
+      .buttons a {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+      }
+      .team-card {
+        max-width: 100%;
+        width: 100%;
+      }
     }
   </style>
 </head>
