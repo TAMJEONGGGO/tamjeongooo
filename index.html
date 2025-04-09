@@ -33,7 +33,502 @@
   }
   </script>
 </head>
+  <title> 탐정사무소, 탐정사무실 | 고고탐정사무실 - 외도조사 전문 경호 전문가</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+     body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #1b1b1b;
+      color: #f0f0f0;
+      background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+      margin: 0;
+    }
+
+    header {
+      background-color: #0e0e0e;
+      color: #f5c66e;
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 2px solid #444;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .header-content img {
+      width: 150px;
+      height: auto;
+    }
+
+    .fade-line {
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+    }
+
+    .fade-line:nth-child(1) { animation-delay: 0s; font-size: 1.2rem; color: #aaa; margin-bottom: 0.3rem; }
+    .fade-line:nth-child(2) { animation-delay: 0.5s; font-size: 2.2rem; font-weight: bold; color: #f5c66e; }
+    .fade-line:nth-child(3) { animation-delay: 1s; font-size: 1rem; color: #ccc; margin-top: 0.5rem; }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .top-banner {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+      text-align: center;
+    }
+
+    .top-banner img {
+      width: 100px;
+      height: auto;
+      opacity: 0.85;
+      filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.5));
+    }
+
+    .top-text {
+      margin-top: 0.5rem;
+      color: #f5c66e;
+      font-size: 1rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+    }
+
+    .banner-images {
+      display: flex;
+      transition: transform 3s ease;
+    }
+
+    .banner-images img {
+      width: 100vw;
+      height: 70vh;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .banner-text {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+      display: inline-block;
+      padding: 3rem;
+      border: 2px dashed #f5c66e;
+      border-radius: 1rem;
+      max-width: 700px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .banner h1 {
+      font-size: 2.5rem;
+      color: #f5c66e;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+    }
+
+    .banner p {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #f0f0f0;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    }
+
+    .buttons {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      color: #1b1b1b;
+      background-color: #f5c66e;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 0 10px rgba(245,198,110,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .buttons a:hover {
+      background-color: #ffe58a;
+      box-shadow: 0 0 20px rgba(245,198,110,0.6);
+      transform: translateY(-3px);
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 3rem 2rem;
+      background: #2a2a2a;
+    }
+
+    .service {
+      background: #1f1f1f;
+      border: 1px solid #555;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 0 12px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .service:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(245, 198, 110, 0.5);
+    }
+
+    .service h2 {
+      font-size: 1.4rem;
+      color: #f5c66e;
+      margin-bottom: 1rem;
+    }
+
+    .service p {
+      font-size: 1rem;
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .team-section {
+      padding: 4rem 2rem;
+      background: #1c1c1c;
+      text-align: center;
+    }
+
+    .team-section h2 {
+      color: #f5c66e;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .team-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .team-card {
+      background: #2a2a2a;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      max-width: 200px;
+    }
+
+    .team-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .team-card h3 {
+      color: #ffe58a;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .team-card p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #ccc;
+    }
+
+    footer {
+      background: #0e0e0e;
+      color: #aaa;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      border-top: 1px solid #444;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #1f1f1f;
+      color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      width: 300px;
+      text-align: center;
+    }
+
+    .modal-content button {
+      background-color: #f5c66e;
+      color: #1b1b1b;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 0 10px rgba(245,198,110,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .modal-content button:hover {
+      background-color: #ffe58a;
+      box-shadow: 0 0 20px rgba(245,198,110,0.6);
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 1024px) {
+      .banner-text {
+        padding: 2rem;
+        max-width: 90%;
+      }
+      .banner h1 {
+        font-size: 2rem;
+      }
+      .banner p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+      }
+      .banner-text {
+        padding: 1.5rem;
+      }
+      .buttons a {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+      }
+      .team-card {
+        max-width: 100%;
+        width: 100%;
+      }
+
+    /* 태블릿 (768~1024px) 대응 */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .banner-text {
+        padding: 2rem;
+        max-width: 90%;
+      }
+      .banner h1 {
+        font-size: 2rem;
+      }
+      .banner p {
+        font-size: 1rem;
+      }
+      .header-content img {
+        width: 120px;
+      }
+      .fade-line:nth-child(2) {
+        font-size: 1.8rem;
+      }
+      .fade-line:nth-child(1),
+      .fade-line:nth-child(3) {
+        font-size: 1rem;
+      }
+      .top-banner {
+        top: 10px;
+        right: 10px;
+      }
+      .top-banner img {
+        width: 80px;
+      }
+      .top-text {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* 모바일 대응 */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+      }
+      .header-content img {
+        width: 100px;
+      }
+      .banner-text {
+        padding: 1.5rem;
+        max-width: 95%;
+      }
+      .banner h1 {
+        font-size: 1.6rem;
+      }
+      .banner p {
+        font-size: 0.9rem;
+      }
+      .buttons a {
+        font-size: 0.85rem;
+        padding: 0.6rem 1.2rem;
+      }
+      .top-banner img {
+        width: 70px;
+      }
+      .top-text {
+        font-size: 0.85rem;
+      }
+      .team-card {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
 <body>
-  <!-- 이하 내용은 기존 body와 동일하게 유지 -->
+  <div class="top-banner">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Emblem_of_Korean_Courts.svg/2048px-     Emblem_of_Korean_Courts.svg.png" alt="법원 이미지" />
+    <div class="top-text">법원과 함께하는 사무실</div>
+  </div>
+
+  <header>
+    <div class="header-content">
+      <img src='https://i.postimg.cc/23h1yhLs/removebg-preview.png' alt='로고'>
+      <div>
+        <div class="fade-line">믿음, 책임감, 전문성</div>
+        <div class="fade-line">고고탐정사무실</div>
+        <div class="fade-line">당신의 문제를 함께 해결합니다</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="banner">
+    <div class="banner-images">
+      <img src="https://www.gosiweek.com/news/data/2024/06/04/p1065598730017713_740_thum.jpg" alt="배너 이미지 1">
+      <img src="https://mblogthumb-phinf.pstatic.net/MjAyMTAxMjlfMjI0/MDAxNjExOTE0MjM0OTE5.L1NVQsxuoXxwFqmczK3QHIxjlSRUT0lM8RSnZfY3910g.Tx9jMk5Pngt7mrjAClOadx-jgt8rzejbjDdjrydzwLwg.JPEG.imshlaw01/SE-9dbd2639-193a-4d21-bb3c-c23d162414a2.jpg?type=w800" alt="배너 이미지 2">
+      <img src = "https://mblogthumb-phinf.pstatic.net/MjAyNTAzMTlfMjIw/MDAxNzQyMzEyODY5NDE5._ta9y6TxrGe3Vd4m7CaOZiT3e6DgDaqjLmpOzMoTh44g.nXxmP0u_RaMq8s0PzLZ5Gqq4Hkmv_0MMwhG91V6kKPog.JPEG/image.JPEG?type=w800" alt="배너 이미지3">
+    </div>
+    <div class="banner-text">
+      <h1>24시간, 빠르고 정확하게!</h1>
+      <p>외도, 실종, 학교폭력, 디지털 포렌식까지 전문가가 해결합니다.</p>
+      <div class="buttons">
+        <a href="https://www.youtube.com/@%EA%B3%A0%EA%B3%A0%ED%83%90%EC%A0%95%EC%82%AC%EB%AC%B4%EC%8B%A4">🔎 YouTube 바로가기</a>
+        <a href="#" id="contactTrigger">📞 상담하기</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="services">
+    <div class="service"><h2>외도조사</h2><p>배우자의 외도 여부를 정밀하게 파악하고 증거를 확보합니다.</p></div>
+    <div class="service"><h2>실종자 추적</h2><p>사라진 가족이나 지인을 찾기 위한 모든 수단을 동원합니다.</p></div>
+    <div class="service"><h2>학교폭력 대응</h2><p>피해자 입장에서 정황 파악, 증거 수집, 상담 연결까지 함께합니다.</p></div>
+    <div class="service"><h2>디지털 포렌식</h2><p>스마트폰, PC, CCTV 등 전자기기 속 데이터를 분석하여 결정적인 증거를 확보합니다.</p></div>
+  </section>
+
+  <section class="team-section">
+    <h2>탐정 소개</h2>
+    <div class="team-cards">
+      <div class="team-card">
+        <h3>강태은</h3>
+        <p>성별: 여자<br>나이: 1987년생<br>자격증: 탐정사 1급</p>
+        <img src='https://i.postimg.cc/2SR0q3Y7/t-waifu2x-photo-noise3.png' />
+      </div>
+      <div class="team-card">
+        <h3>김태식</h3>
+        <p>성별: 남자<br>나이: 1980년생<br>자격증: 탐정사 1급</p>
+        <img src="https://i.postimg.cc/QxsbswJf/ts-waifu2x-photo-noise3.png" alt="자격증2">
+      </div>
+      <div class="team-card">
+        <h3>강종선</h3>
+        <p>성별: 남자<br>나이: 1981년생<br>자격증: 탐정사 1급</p>
+        <img src="https://i.postimg.cc/8PHbC4yN/js-waifu2x-photo-noise3.png" alt="자격증3">
+      </div>
+      <div class="team-card">
+        <h3>김태오</h3>
+        <p>성별: 남자<br>나이: 1978년생<br>자격증: 탐정사 1급</p>
+        <img src="https://i.postimg.cc/L883gP7f/to-waifu2x-photo-noise3.png" alt="자격증4">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 고고탐정사무실</p>
+  </footer>
+
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <h3>어떤 방식으로 상담을 원하시나요?</h3>
+      <button id="callButton">전화하기</button>
+      <button id="smsButton">문자하기</button>
+      <button class="close-btn" id="closeModalBtn">닫기</button>
+    </div>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.banner-images img');
+    const totalSlides = slides.length;
+
+    function showSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      document.querySelector('.banner-images').style.transform = translateX(-${currentSlide * 100}%);
+    }
+
+    setInterval(showSlide, 5000);
+
+    document.getElementById('contactTrigger').addEventListener('click', function() {
+      document.getElementById('contactModal').style.display = 'flex';
+    });
+
+    document.getElementById('closeModalBtn').addEventListener('click', function() {
+      document.getElementById('contactModal').style.display = 'none';
+    });
+
+    document.getElementById('callButton').addEventListener('click', function() {
+      window.location.href = 'tel:010-5568-3334';
+    });
+
+    document.getElementById('smsButton').addEventListener('click', function() {
+      window.location.href = 'sms:010-5568-3334';
+    });
+
+  </script>
+<script>
+  const slides = document.querySelectorAll('.banner-images img');
+  const bannerImages = document.querySelector('.banner-images');
+  const totalSlides = slides.length;
+  let currentSlide = 0;
+
+  bannerImages.style.width = ${300 * totalSlides}vw;
+
+  function showSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    bannerImages.style.transform = translateX(-${currentSlide * 100}vw);
+  }
+
+  setInterval(showSlide, 5000);
+</script>
 </body>
 </html>
