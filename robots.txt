@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tamjeongggo.github.io/tamjeongooo/sitemap.xml
