@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
- <title>부산탐정 | 고고탐정사무실 - 외도조사·학교폭력·위치추적 전문가</title>
-
-  <!-- 검색엔진 최적화 -->
+  <title>부산탐정 | 고고탐정사무실 - 외도조사·학교폭력·위치추적 전문가</title>
+   <!-- 검색엔진 최적화 -->
   <meta name="description" content="부산에 위치한 고고탐정사무실은 외도조사, 위치추적, 학교폭력, 디지털 포렌식 등을 전문으로 하는 믿을 수 있는 탐정 사무실입니다.">
   <meta name="keywords" content="고고탐정사무실, 부산탐정, 탐정사무소, 외도조사, 위치추적, 사설탐정, 흥신소, 도청기탐지">
   <meta name="author" content="고고탐정사무실">
@@ -43,7 +41,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
 
-     body {
+    body {
       font-family: 'Noto Sans KR', sans-serif;
       background-color: #1b1b1b;
       color: #f0f0f0;
@@ -315,37 +313,36 @@
       transform: translateY(-3px);
     }
 
+    @media (max-width: 1024px) {
+      .banner-text {
+        padding: 2rem;
+        max-width: 90%;
+      }
+      .banner h1 {
+        font-size: 2rem;
+      }
+      .banner p {
+        font-size: 1rem;
+      }
+    }
+
     @media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-  }
-  .banner-text {
-    padding: 1.5rem;
-  }
-  .buttons a {
-    font-size: 0.9rem;
-    padding: 0.6rem 1.2rem;
-  }
-  .team-card {
-    max-width: 100%;
-    width: 100%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .banner-text {
-    padding: 2rem;
-    max-width: 90%;
-  }
-  .banner h1 {
-    font-size: 2rem;
-  }
-  .banner p {
-    font-size: 1rem;
-  }
-}
-
-    /* 태블릿 (768~1024px) 대응 */
+      .header-content {
+        flex-direction: column;
+      }
+      .banner-text {
+        padding: 1.5rem;
+      }
+      .buttons a {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+      }
+      .team-card {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+/* 태블릿 (768~1024px) 대응 */
     @media (min-width: 768px) and (max-width: 1024px) {
       .banner-text {
         padding: 2rem;
@@ -508,7 +505,7 @@
 
     function showSlide() {
       currentSlide = (currentSlide + 1) % totalSlides;
-      document.querySelector('.banner-images').style.transform = translateX(-${currentSlide * 100}%);
+      document.querySelector('.banner-images').style.transform = `translateX(-${currentSlide * 100}%)`;
     }
 
     setInterval(showSlide, 5000);
@@ -536,57 +533,15 @@
   const totalSlides = slides.length;
   let currentSlide = 0;
 
-  bannerImages.style.width = ${300 * totalSlides}vw;
+  bannerImages.style.width = `${300 * totalSlides}vw`;
 
   function showSlide() {
     currentSlide = (currentSlide + 1) % totalSlides;
-    bannerImages.style.transform = translateX(-${currentSlide * 100}vw);
+    bannerImages.style.transform = `translateX(-${currentSlide * 100}vw)`;
   }
 
   setInterval(showSlide, 5000);
 </script>
-        <!-- 전화/문자 선택지 -->
-<div id="contactOptions" class="contact-options hidden">
-  <a href="tel:01055683334" class="option">📞 전화하기</a>
-  <a href="sms:01055683334" class="option">💬 문자하기</a>
-</div>
-
-<style>
-  .contact-btn {
-    background-color: #007BFF;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  .contact-options {
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-    transition: all 0.3s ease;
-  }
-
-  .contact-options.hidden {
-    display: none;
-  }
-
-  .option {
-    background-color: #f1f1f1;
-    padding: 10px 15px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  }
-
-  .option:hover {
-    background-color: #ddd;
-  }
-</style>
 </body>
 </html>
 
