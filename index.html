@@ -411,6 +411,56 @@
         width: 100%;
       }
     }
+      <!-- 전화/문자 선택지 -->
+<div id="contactOptions" class="contact-options hidden">
+  <a href="tel:01055683334" class="option">📞 전화하기</a>
+  <a href="sms:01055683334" class="option">💬 문자하기</a>
+</div>
+
+<style>
+  .contact-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .contact-options {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .contact-options.hidden {
+    display: none;
+  }
+
+  .option {
+    background-color: #f1f1f1;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+  .option:hover {
+    background-color: #ddd;
+  }
+</style>
+
+<script>
+  function toggleContactOptions() {
+    const options = document.getElementById('contactOptions');
+    options.classList.toggle('hidden');
+  }
+</script>
+
   </style>
 </head>
 <body>
