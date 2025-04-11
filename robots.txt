@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://고고탐정사무실.site/sitemap.xml
-Sitemap: https://부산탐정사무실.site/sitemap.xml
+Sitemap: https://xn--9z1b24gztcj6z9sfzrx2f.site/sitemap.xml
+Sitemap: https://xn--v92b15bv1dpa63z01k8oq.site/sitemap.xml
